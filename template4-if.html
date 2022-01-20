@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>if文のテスト</title>
+    </head>
+
+    <!--"if else" 若是～的话，那么～～ -->
+    <body>
+        <script>
+            var refvalue = 80;//基準値
+            var score;//点数
+            score = prompt("点数を入力してください",80);
+
+            if (score == 100) {
+                document.write("<h1>百点満点!</>");
+            }
+            if (score >= refvalue) {
+                document.write("<h1>合格です.</h1>");
+                document.write("<p>よくがんばりました.</p>");
+            }
+            else {
+                document.write("<h1>不合格です.</h1>");
+                document.write("<p>もう少しがんばりましょう.</p>");
+            }
+        </script>
+    </body>
+
+    <!--多个"if else" 条件式组合 ||,&& 使用方法 -->
+    <body>
+        <script>
+            var month;
+            month = prompt("月を入力してください",1);
+            
+            if ((month == 12)|| (month == 1)|| (month ==2)) {
+                document.write("<h1>冬</>");
+            }
+            else if ((month >=3) && (month <= 5)) {
+                document.write("<h1>春</>")
+            }
+            else if ((month >=6) && (month <= 8)) {
+                document.write("<h1>夏</>")
+            }
+            else if ((month >=9) && (month <= 11)) {
+                document.write("<h1>秋</>")
+            }
+            else {
+                document.write("<h1>1から12の値を入力してください</>")
+            }
+
+        </script>
+    </body>
+</html>
