@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>switch文で春夏秋冬を判断する</title>
+    </head>
+
+    <body>
+        <script>
+            var month;
+            month=prompt("月を入力してください","")
+            month=Number(month);
+
+            switch(month){
+                case 12:
+                case 1:
+                case 2: 
+                    document.write("冬");
+                    break;
+                case 3:
+                case 4:
+                case 5: 
+                    document.write("春");
+                    break;
+                case 6:
+                case 7:
+                case 8: 
+                    document.write("夏");
+                    break;
+                case 9:
+                case 10:
+                case 11: 
+                    document.write("秋");
+                    break;
+                default:
+                    document.write("1から12の値を入力してください");
+            }
+        </script>
+    </body>
