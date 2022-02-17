@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>for文のテスト、while文のテスト</title>
+    </head>
+
+    <!--"for" 迴圈的使用-->
+     <body>
+         <table>
+             <tr><th>和暦</th><th> 西暦</th></tr>
+            <script>
+                var i;
+                for (i = 1;i <= 10;i++){
+                    document.write("<tr><td>",i,"</td>");
+                    document.write("<td>",i + 1988,"</td></tr>");
+                }
+            </script>
+         </table>
+     </body>
+
+     <!--"while"迴圈的使用 -->
+     <body>
+         <table>
+            <tr><th>和暦</th><th> 西暦</th></tr>
+            <script>
+                var MAX = 8;
+                var i = 1;
+                while (i <= MAX){
+                    document.write("<tr><td>",i,"</td>");
+                    document.write("<td>",i + 1988,"</td></tr>");
+                    i++;
+                }
+            </script>
+         </table>
+     </body>
+
+     <!--"break"跳出迴圈的使用 -->
+     <body>
+         <script>
+             var ANS = 50;
+             var num;
+             var msg = "数を入力してください";
+             while(true){
+                 num = prompt(msg,0);
+                 if (ANS == num){
+                     document.write("<h1>正解です</>");
+                        break;
+                 }
+                 if (num < ANS){
+                     msg ="もっと大きい数を入力ください";
+                 } else if (num > ANS){
+                     msg ="もっと小さい数を入力ください"
+                 } else {
+                     msg ="数を入力してください"
+                 }   
+             }
+
+         </script>
+     </body>
+
