@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>オブジェクトを生成する</title>
+    </head>
+<!--日期、时间的显示-->
+    <body>
+        <script>
+            var now;
+            now = new Date();
+            document.write(now.toString(),);
+
+//指定日期、时间
+            var aDay;
+            aDay = new Date(2022,2,1,15,43,15);
+            document.write("<p>",aDay.toString(),"</p>");
+
+//“XXXX年X月X日”形式的表示
+            var now,date;
+            now = new Date();
+                date = now.getFullYear() + "年" +
+                (now.getMonth() + 1) + "月" +
+                now.getDay()+"日";
+            document.write(date);
+
+//今年剩余的天数显示：
+            var gantan,days,diff;
+            gantan = new Date(now.getFullYear() + 1,0,1);
+            days = Math.ceil(diff / (24 * 60 * 60 * 1000));
+            diff = gantan,getTime() - now.getTime();
+            document.write("<h1>今年の残り日数:",days,"</h1>");
+        </script>
+    </body>
+</html>

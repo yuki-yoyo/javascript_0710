@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Math物件的方法</title>
+        <body>
+            <script>
+                
+                /*
+                var num1 =10;
+                var num2 =15;
+                var num3 =16;
+                document.write(Math.max(num1,num2,num3),"<br>"); //最大值
+                document.write(Math.min(num1,num2,num3)); //最小值
+                */
+
+                //Math.random “0以上1以下之间的数字随机
+                /*
+                var random =Math.random();
+                if (random < 0.33){
+                    document.write("大吉");
+                }else if(random < 0.66){
+                    document.write("吉");
+                }else {
+                    document.write("凶");
+                }
+                */
+
+                //String “字符串”
+                var str1 = "哈喽 你好javascript";
+                document.write(str1,"<br>");
+                document.write("字串长度:",str1.length,"<br>"); //取得字串的长度
+
+                var str2 = new String("文字列操作");
+                for(var i = 0; i <= (str2.length - 1); i++) {
+                    document.write("<h2>",str2.charAt(i),"</h2>"); //获取字串中的字符
+                }
+            </script>
+        </body>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>変数のスコープ</title>
+        <script>
+            function testFunc(){
+                var num;
+                num = 5;
+            }
+        </script>
+        
+        <body>
+            <script>
+                var num =3;
+                testFunc();
+                document.write(num,"<br>");
+            </script>
+        </body>
