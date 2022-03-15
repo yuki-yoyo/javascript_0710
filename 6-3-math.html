@@ -27,6 +27,7 @@
                 */
 
                 //String “字符串”
+                /*
                 var str1 = "哈喽 你好javascript";
                 document.write(str1,"<br>");
                 document.write("字串长度:",str1.length,"<br>"); //取得字串的长度
@@ -35,5 +36,34 @@
                 for(var i = 0; i <= (str2.length - 1); i++) {
                     document.write("<h2>",str2.charAt(i),"</h2>"); //获取字串中的字符
                 }
+                */
+
+
+
+                
+                var title1 = "首页的排头";
+                var anchor1 = title1.anchor("pTop");
+                document.write("<h1>",anchor1,"</h1>")
+
+                
+                var url = "http://google.co.jp";  //link链接外部网站 方式一  
+                var text = "Google".link(url) + "搜索";
+                document.write("<h1>",text,"</h1>");
+
+                /* link外部网站 方式二
+                var str = "google";
+                var link = str.toUpperCase().link("http://google.co.jp");
+                document.write("<h1>",link,"</h1>")
+                */
+
+                for (i = 0;i < 20; i++){
+                    document.write("<h2>hello</h2>");
+                }
+                
+                var toAnchor1 = "前往首页的前端".link("#pTop");//跳转到首页前端画面
+                document.write("<h2>",toAnchor1,"</h2>");
+
+                
+                
             </script>
         </body>
