@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Array分类的列表管理</title>
+        <body>
+            <script>
+                /*
+                var names  = new Array(4);
+                names[0] = "山田太郎";
+                names[1] = "中山一郎";
+                names[2] = "井上花子";
+                names[3] = "江藤桜";
+
+                /*
+                document.write("<h2>こんにちは",names[0],"さん</h2>"); //列印出指定的名字；
+                document.write("<h2>こんにちは",names[3],"さん</h2>");
+                */
+                /*
+               for (var i = 0; i <= (names.length - 1); i++){
+                    document.write("<h2>こんにちは",names[i],"さん</h2>");
+               } //列印出全部的名字；
+               */
+
+              /*
+               var days = new Array("日","月","火","水","木","金","土");
+               var date = new Date();
+               var day = days[date.getDay()];
+               document.write("<h1>今日は",day,"曜日</h1>");
+
+               date.setFullYear(date.getFullYear() +1);
+               document.write("<h1>一年後は",days[date.getDay()],"曜日</h1>");
+               */
+            </script>
+            <script>
+                function compare(a,b){
+                    return a - b; //從小到大的順序排列，從大到小的順序排列的話是：b - a;
+                } //大小的比較;
+            </script>
+            <script>  
+               var ages = new Array(4,6,10,24,1,11,40);
+               ages = ages.sort(compare); // sort():數組排列;
+               document.write(ages.join(">")); // join():數組連結的作用;
+            </script>
+        </body>
