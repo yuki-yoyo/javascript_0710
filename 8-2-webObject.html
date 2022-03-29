@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>web 事件處理程序</title>
+        <script>
+            function func1(str) {
+                alert(str + "已支付成功，謝謝您本次購買。");
+            } //確認按鍵
+
+            function init() {
+                alert("請確認您所購買的品項");
+            }
+            window.onload = init; //彈出確認對話窗口；
+        </script>
+    </head>
+
+    <body>
+        <form id = "myForm" name="myForm">
+            <p>
+                <input type="button" value="ボタン１"
+                        name="button1" onclick="func1('ボタン１');">
+            </p>
+        </form>
+    </body>

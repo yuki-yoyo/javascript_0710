@@ -32,14 +32,34 @@
                document.write("<h1>一年後は",days[date.getDay()],"曜日</h1>");
                */
             </script>
+    <!--7-3 -->
             <script>
+                /*
                 function compare(a,b){
                     return a - b; //從小到大的順序排列，從大到小的順序排列的話是：b - a;
                 } //大小的比較;
+                */
             </script>
-            <script>  
+            <script> 
+            /*
                var ages = new Array(4,6,10,24,1,11,40);
                ages = ages.sort(compare); // sort():數組排列;
                document.write(ages.join(">")); // join():數組連結的作用;
+            */  
             </script>
+            <script>
+    //7-4 物件 object  “key 鍵” 和 “value 值” 的配對-
+               var colors = {
+                   while:"白色",
+                   red:"赤色",
+                   green:"緑色",
+                   yellow:"黄色",
+               };
+               
+               //document.write(colors.red);
+               for (var eng in colors){
+                   document.write("<h2>",eng + "" + colors[eng],"</h2>")
+               }
+            </script>
+   
         </body>
