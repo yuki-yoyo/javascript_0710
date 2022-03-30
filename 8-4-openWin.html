@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>web 設置點擊打開新的網頁</title>
+        <script>
+            /*
+            //點擊會直接跳出一個新的網頁
+            function openWin() {
+                var win = window.open("http://google.co.jp","",
+                    "resizable=yes,width=1000,height=500");//可調整大小、寬度、高度
+            }
+            */
+            //點擊會跳出帶圖片的畫面，添加點擊關閉畫面按鍵
+            function openWin() {
+                var win =window.open("","","width=1000,height=1000"); //打開window
+                win.document.open(); // 打開document 物件
+                win.document.write("<img src='../images/cat.jpeg'>"); //圖片畫面的顯示
+                win.document.write("<form><p>"); //form的表示
+                win.document.write('<input type="button" value="關閉"'); //關閉按鍵的設置
+                win.document.write('onclick="window.close()">'); //後台事件處理
+                win.document.write("<p></form>"); 
+                win.document.close(); // 關閉document 物件
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name ="myForm"><p>
+            <input type="button" value="打開"
+                name="openBtn" onclick="openWin()">
+        </p></form>
+    </body>

@@ -7,7 +7,12 @@
             function stdWeight(myForm) {
                 var height,weight;
                 height = Number(myForm.height.value);
-                weight = (height - 100) * 0.9;
+                //分別判斷男女的標準體重
+                if (myForm.sex[0].checked) {
+                    weight = (height - 80) * 0.7;
+                } else {
+                    weight = (height - 70) * 0.6;
+                }
                 myForm.weight.value = weight;
             }
         </script>
