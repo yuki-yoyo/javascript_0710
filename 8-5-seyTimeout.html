@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>web 計時器</title>
         <script>
+            
             var hourBox,minBox,secBox;
             var timer;
 
@@ -30,6 +31,15 @@
 
                 timer = setTimeout("alert('時間截止')",5000); //5秒後跳出顯示時間截止的對話框設定；
             }
+
+            
+            //設定一定的時間限制從當前畫面跳轉到另外一個網頁；
+            /*  
+            window.onload = move;
+            function move() {
+                setTimeout("location.replace('http://google.co.jp')",10*1000);
+            }
+            */
         </script>
     </head>
 
