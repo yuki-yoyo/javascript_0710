@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>定義user用戶</title>
+        <script>
+            //定義用戶的姓名與體重；
+            function Person(name,height) {
+                this.name = name;
+                this.height = height;
+            }
+            //定義用戶的標準體重；
+            function calcWeight() {
+                var weight;
+                weight = (this.height - 100) * 0.9;
+                return weight;
+            }
+            Person.prototype.stdWeight = calcWeight;
+        </script>
+    </head>
+
+    <body>
+        <script>
+            var friends = new Array(3);
+            friends[0] = new Person("小李",160);
+            friends[1] = new Person("小黃",165);
+            friends[2] = new Person("小張",180);
+
+            for (var i = 0;i <= friends.length - 1;i++) {
+                document.write("<p>",friends[i].name,":",
+                    "身高:",friends[i].height,"cm ->",  
+                    "標準體重:",friends[i].stdWeight(),"kg</p>");
+            }
+        </script>
+    </body>
