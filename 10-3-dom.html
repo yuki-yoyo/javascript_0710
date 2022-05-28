@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>HTML DOM 動画設計</title>
+        <style>
+            #car {
+                position: absolute;
+                top: 200px;
+                left: 0px;
+                height: 70px;
+                width: 150px;
+            }
+        </style>
+        <script>
+            var INTERVAL = 10;
+            var x = 0;
+            var animating = false;
+            var timer;
+            //動畫開始
+            function move(){
+                aCar = document.getElementById("car");
+                x = x + 5;
+                aCar.style.left = x + "px";
+                if (x > 500) {
+                    x = 0;
+                }
+                timer = setTimeout("move()",INTERVAL);
+            }
+            //動畫停止
+            function startStop(){
+                if (animating){
+                    clearTimeout(timer);
+                    document.getElementById("sBtn").value = "スタート";
+                } else {
+                    document.getElementById("sBtn").value = "ストップ";
+                    move();
+                }
+                animating = !animating;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>DOMによるアニメーション</h1>
+        <form><p>
+            <input type="button" id="sBtn" value="スタート"
+                onclick="startStop()">
+        </p></form>
+
+        <div id="car">
+            <img src="../images/car.jpeg" alt="車">
+        </div>
+    </body>
