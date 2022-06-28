@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax 測試</title>
+    </head>
+    <body>
+        <div id="test">AJAX 測試</div>
+        <script>
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                   
+                    console.log(xhr.response);
+                }
+            }
+            xhr.open("GET","./test,json",true);//第二個參數：目標的檔案，第三個參數：要不要用非同步的方式。//目前只支持在同樣網名底下的頁面去拿資料，不支持去別的頁面索取
+            xhr.send(null);
+            
+        </script>
+    </body>

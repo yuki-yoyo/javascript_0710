@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>XmlHttpRequest物件</title>
+        <style type="text/css">
+            body {
+                text-align: center;
+            }
+            #myArea {
+                background: yellow;
+            }
+        </style>
+        <script>
+            var req;
+            function getFile(path) { //HTTP要求傳送的設定
+                req = new XMLHttpRequest();
+                req.onreadystatechange = showData;
+                req.open("GET",path,true);
+                req.send(null);
+            }
+
+            function showData() {
+                if (req.readyState == 4 && req.status == 200) {
+                    document.getElementById("myArea").innerHTML = req.responseText;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myForm"><p>
+            <input type="button" value="ロート"
+                onclick="getFile('data.txt');">
+        </p></form>
+        <div id="myArea">
+
+        </div>
+    </body>
+</html>
